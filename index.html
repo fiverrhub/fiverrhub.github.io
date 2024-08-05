@@ -1,66 +1,96 @@
-# Sample Repository
-
-Welcome to the Sample Repository!
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Sample Web Page</title>
+    <title>Fiverr Steel Palooza Short Story Writing Competition</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
             margin: 0;
             padding: 0;
+            background-color: #f4f4f4;
             text-align: center;
         }
-        header {
+        .header {
             background-color: #333;
-            color: #fff;
+            color: white;
             padding: 10px 0;
         }
-        main {
-            padding: 20px;
+        .header h1 {
+            margin: 0;
+            font-size: 2em;
+            font-weight: bold;
         }
-        footer {
+        .subheading {
+            color: red;
+            font-weight: bold;
+            font-size: 1.2em;
+            margin: 20px 0;
+        }
+        .loading {
+            margin: 20px 0;
+            font-size: 1em;
+            color: #555;
+        }
+        .progress-bar {
+            width: 50%;
+            margin: 20px auto;
+            border: 1px solid #ccc;
+            background-color: #fff;
+        }
+        .progress-bar div {
+            height: 20px;
+            background-color: #4caf50;
+            width: 0;
+            transition: width 1s;
+        }
+        .footer {
             background-color: #333;
-            color: #fff;
+            color: gray;
             padding: 10px 0;
+            font-size: 0.8em;
             position: fixed;
-            width: 100%;
             bottom: 0;
+            width: 100%;
+            text-align: center;
+        }
+        .footer img {
+            width: 100px; /* Adjust the size of the logos as needed */
+            margin: 0 10px;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Welcome to My Sample Web Page!</h1>
-    </header>
-    <main>
-        <h2>Hello, Friends!</h2>
-        <p>This is a simple web page to show you how HTML and CSS work together. Feel free to explore and modify the code as you like!</p>
-    </main>
-    <footer>
-        <p>&copy; 2024 My Sample Web Page</p>
-    </footer>
+    <div class="header">
+        <h1>Fiverr Steel Palooza Short Story Writing Competition Judged by Elif Shafak</h1>
+    </div>
+    <div class="subheading">Results will be posted here</div>
+    <div class="loading">Stay tuned</div>
+    <div class="progress-bar">
+        <div id="progress"></div>
+    </div>
+    <div class="footer">
+        <img src="https://freelogopng.com/images/all_images/619/fiverr-logo.png" alt="Fiverr Logo">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Paysafe.svg/1200px-Paysafe.svg.png" alt="Paysafe Logo">
+        <div>Copyright © 2010 Fiverr International Ltd. All rights reserved. Fiverr is a registered trademark of Paysafe Holdings UK Limited.</div>
+    </div>
+
+    <script>
+        // Simulate progress bar loading
+        function simulateLoading() {
+            const progressBar = document.getElementById('progress');
+            let width = 0;
+            const interval = setInterval(() => {
+                if (width >= 100) {
+                    clearInterval(interval);
+                } else {
+                    width += 1;
+                    progressBar.style.width = width + '%';
+                }
+            }, 50);
+        }
+        simulateLoading();
+    </script>
 </body>
 </html>
-
-This is a basic repository structure to help you get started with a new project.
-
-## Getting Started
-
-To get started, clone this repository and open the files. You'll find a sample `index.html` and `styles.css` to kick off a web project.
-
-## Files
-
-- **`index.html`**: A basic HTML file.
-- **`styles.css`**: Basic styles for the HTML file.
-- **`README.md`**: This file, providing an overview of the project.
-- **`LICENSE`**: The license for this project.
-- **`CONTRIBUTING.md`**: Guidelines for contributing to this repository.
-
-## License
-
-This repository is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
