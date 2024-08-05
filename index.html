@@ -13,14 +13,30 @@
             text-align: center;
         }
         .header {
-            background-color: #333;
+            background-color: #4caf50; /* Green bar */
             color: white;
             padding: 10px 0;
+            position: relative;
         }
         .header h1 {
             margin: 0;
             font-size: 2em;
             font-weight: bold;
+            display: inline; /* Keep the H1 inline with the text */
+        }
+        .header .judge {
+            font-weight: bold;
+            font-size: 1.5em;
+            color: white;
+            display: inline;
+            margin-left: 10px; /* Space between H1 and the additional text */
+        }
+        .header .event-date {
+            font-weight: bold;
+            font-size: 1.2em;
+            color: white;
+            display: block; /* Display on a new line */
+            margin-top: 10px; /* Space between the judge text and event date */
         }
         .subheading {
             color: red;
@@ -46,7 +62,7 @@
             transition: width 1s;
         }
         .footer {
-            background-color: #333;
+            background-color: #e0f2f1; /* Light green footer */
             color: gray;
             padding: 10px 0;
             font-size: 0.8em;
@@ -55,24 +71,28 @@
             width: 100%;
             text-align: center;
         }
-        .footer img {
-            width: 100px; /* Adjust the size of the logos as needed */
-            margin: 0 10px;
-        }
     </style>
 </head>
 <body>
     <div class="header">
-        <h1>Fiverr Steel Palooza Short Story Writing Competition Judged by Elif Shafak</h1>
+        <h1>STEEL A PALOOZA SHORT STORY WRITING COMPETITION</h1>
+
+<br>
+        <span class="judge">(JUDGE BY ELIF SHAFAK)</span>
+
+</br>
+        <div class="event-date">Event Date: 17th July 2024 to 29th July 2024</div>
     </div>
-    <div class="subheading">Results will be posted here</div>
-    <div class="loading">Stay tuned</div>
+    <div class="subheading">
+        <br>
+        The Top 100 list of stories, including author names, will be published here. We kindly request that you monitor this link over the coming days for updates.<br>
+        We appreciate your patience and understanding.
+    </div>
+    <div class="loading"></div>
     <div class="progress-bar">
         <div id="progress"></div>
     </div>
     <div class="footer">
-        <img src="https://freelogopng.com/images/all_images/619/fiverr-logo.png" alt="Fiverr Logo">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Paysafe.svg/1200px-Paysafe.svg.png" alt="Paysafe Logo">
         <div>Copyright © 2010 Fiverr International Ltd. All rights reserved. Fiverr is a registered trademark of Paysafe Holdings UK Limited.</div>
     </div>
 
