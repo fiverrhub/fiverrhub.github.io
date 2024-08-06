@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fiverr Steel Palooza Short Story Writing Competition</title>
     <style>
+        @keyframes flash {
+            0% { background-color: gold; }
+            50% { background-color: white; }
+            100% { background-color: gold; }
+        }
+
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -12,18 +18,21 @@
             background-color: #f4f4f4;
             text-align: center;
         }
+
         .header {
             background-color: #4caf50; /* Green bar */
             color: white;
             padding: 10px 0;
             position: relative;
         }
+
         .header h1 {
             margin: 0;
             font-size: 2em;
             font-weight: bold;
             display: inline; /* Keep the H1 inline with the text */
         }
+
         .header .judge {
             font-weight: bold;
             font-size: 1.5em;
@@ -31,6 +40,7 @@
             display: inline;
             margin-left: 10px; /* Space between H1 and the additional text */
         }
+
         .header .event-date {
             font-weight: bold;
             font-size: 1.2em;
@@ -38,34 +48,40 @@
             display: block; /* Display on a new line */
             margin-top: 10px; /* Space between the judge text and event date */
         }
+
         .subheading {
             color: red;
             font-weight: bold;
             font-size: 1.2em;
             margin: 20px 0;
         }
+
         .announcement {
             color: #333;
             font-weight: bold;
             font-size: 1.5em;
             margin: 20px 0;
         }
+
         .message {
             font-size: 1.2em;
             margin: 20px 0;
         }
+
         .progress-bar {
             width: 50%;
             margin: 20px auto;
             border: 1px solid #ccc;
             background-color: #fff;
         }
+
         .progress-bar div {
             height: 20px;
             background-color: #4caf50;
             width: 0;
             transition: width 1s;
         }
+
         .footer {
             background-color: #e0f2f1; /* Light green footer */
             color: gray;
@@ -76,19 +92,26 @@
             width: 100%;
             text-align: center;
         }
+
         table {
             width: 80%;
             margin: 20px auto;
             border-collapse: collapse;
         }
+
         th, td {
             border: 1px solid #ddd;
             padding: 8px;
             text-align: left;
         }
+
         th {
             background-color: #4caf50;
             color: white;
+        }
+
+        .highlight {
+            animation: flash 1s infinite;
         }
     </style>
 </head>
@@ -107,7 +130,7 @@
         We are pleased to inform you that your story, <strong>"Women - The Strongest on the Planet"</strong>, has been awarded Best Story in the Steel-a-Palooza contest.
     </div>
     <div class="message">
-        Below are the Top 30 stories. Congratulations to all who have qualified for a 100% bonus!
+        Below are the Top 30 stories. Congratulations to all who qualified for a 100% bonus!
     </div>
     <div class="message">
         Please stay tuned for the remaining list, which will be posted within the next few days.
@@ -121,7 +144,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
+            <tr class="highlight">
                 <td>1</td>
                 <td>Amy Twigg</td>
                 <td>Women - The Strongest on the Planet</td>
@@ -276,4 +299,25 @@
     <div class="progress-bar">
         <div id="progress"></div>
     </div>
-    <div
+    <div class="footer">
+        &copy; Fiverr © 2024. All rights reserved.
+    </div>
+
+    <script>
+        // Simulate progress bar loading
+        function simulateLoading() {
+            const progressBar = document.getElementById('progress');
+            let width = 0;
+            const interval = setInterval(() => {
+                if (width >= 100) {
+                    clearInterval(interval);
+                } else {
+                    width += 1;
+                    progressBar.style.width = width + '%';
+                }
+            }, 50);
+        }
+        simulateLoading();
+    </script>
+</body>
+</html>
