@@ -40,14 +40,80 @@
     }
 </style>
 
-<div class="header">
-    <img src="BANNER.jpg" alt="INCSPIRATION AWARDS">
-    <div class="header-content">
-        <h1>FINAL RESULTS WILL BE POSTED HERE</h1>
-        <div class="FINAL RESULTS WILL BE POSTED HERE </div>
-    </div>
-</div>
 
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inspiration Awards</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .header {
+            width: 100%;
+            height: auto;
+            position: relative;
+        }
+
+        .header img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .header-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        .header-content h1 {
+            margin: 0;
+            font-size: 5em;
+            font-weight: bold;
+        }
+
+        .results-coming-soon {
+            margin-top: 20px;
+            font-size: 5em;
+            font-weight: bold;
+            animation: fadeInOut 2s infinite;
+            color: gold;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+        }
+
+        @keyframes fadeInOut {
+            0%, 100% {
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+        }
+    </style>
 </head>
+
+<body>
+    <div class="header">
+        <img src="BANNER.jpg" alt="Inspiration Awards">
+        <div class="header-content">
+            
+            <div class="results-coming-soon">Results Coming Soon</div>
+        </div>
+    </div>
+</body>
+
+</html>
+
 <body>
     
