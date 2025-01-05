@@ -40,10 +40,21 @@
     }
 </style>
 
-
-
+<div class="header">
+    <img src="BANNER.jpg" alt="INCSPIRATION AWARDS">
+    <div class="header-content">
+       
+    </div>
+</div>
 <!DOCTYPE html>
 <html lang="en">
+
+
+</body>
+
+</html>
+
+</head>
 
 <head>
     <meta charset="UTF-8">
@@ -53,6 +64,9 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: black;
+            color: white;
         }
 
         .header {
@@ -79,17 +93,26 @@
 
         .header-content h1 {
             margin: 0;
-            font-size: 5em;
+            font-size: 2.5em;
             font-weight: bold;
         }
 
         .results-coming-soon {
-            margin-top: 20px;
-            font-size: 5em;
+            margin: 20px 0;
+            font-size: 2em;
             font-weight: bold;
             animation: fadeInOut 2s infinite;
             color: gold;
             text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+        }
+
+        .fireworks {
+            margin-top: 40px;
+            font-size: 2em;
+            font-weight: bold;
+            color: lightblue;
+            text-shadow: 3px 3px 8px rgba(255, 0, 0, 0.7), 3px 3px 8px rgba(0, 255, 0, 0.7), 3px 3px 8px rgba(0, 0, 255, 0.7);
+            animation: fireworks 1.5s infinite ease-in-out;
         }
 
         @keyframes fadeInOut {
@@ -100,20 +123,31 @@
                 opacity: 1;
             }
         }
+
+        @keyframes fireworks {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            50% {
+                transform: scale(1.5);
+                opacity: 0.5;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
     </style>
 </head>
 
 <body>
     <div class="header">
-        <img src="BANNER.jpg" alt="Inspiration Awards">
-        <div class="header-content">
-            
-            <div class="results-coming-soon">Results Coming Soon</div>
-        </div>
+     
     </div>
-</body>
 
-</html>
+    <div class="results-coming-soon">Results Coming Soon</div>
 
+    <div class="fireworks">Happy New Year 2025</div>
 <body>
     
