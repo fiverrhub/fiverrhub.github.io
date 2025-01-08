@@ -31,12 +31,14 @@
             padding: 20px;
             border-radius: 10px;
         }
-        h1 {
+        h3 {
             color: #4CAF50;
+            font-size: 1.5em;
         }
         ul {
             list-style-type: none;
             padding: 0;
+            margin: 0;
         }
         li {
             padding: 10px;
@@ -44,19 +46,20 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            font-size: 1.1em;
         }
         .special {
             font-weight: bold;
             color: #000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
-        .special .rank {
+        .special .rank, .special .name {
             font-weight: bold;
-            color: #000;
         }
         .special .name {
-            font-weight: bold;
             color: #000;
-            text-transform: ;
         }
         .congratulations {
             font-size: 1em;
@@ -98,6 +101,60 @@
             font-size: 0.9em;
             color: #333;
         }
+
+        /* Media Queries for Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+                padding: 15px;
+            }
+            h3 {
+                font-size: 1.2em;
+            }
+            .special {
+                font-size: 1em;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .congratulations {
+                font-size: 0.9em;
+            }
+            .footer {
+                position: static;
+                text-align: center;
+                margin-top: 20px;
+            }
+            .footer h2 {
+                font-size: 1.3em;
+            }
+            .footer img {
+                width: 120px;
+            }
+            .footer span {
+                font-size: 0.8em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                width: 95%;
+                padding: 10px;
+            }
+            h3 {
+                font-size: 1.1em;
+            }
+            .special {
+                font-size: 0.9em;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .congratulations {
+                font-size: 0.8em;
+            }
+            .footer {
+                margin-top: 30px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -106,7 +163,7 @@
         Your browser does not support the video tag.
     </video>
     <div class="container">
-        <h3 fo>WELCOME TO THE FIVERR INKSPIRATION AWARDS 2024 RESULTS REVEALING EVENT</h3>
+        <h3>WELCOME TO THE FIVERR INKSPIRATION AWARDS 2024 RESULTS REVEALING EVENT</h3>
         <ul>
             <li>Rank 1</li>
             <li>Rank 2</li>
@@ -118,25 +175,24 @@
             <li>Rank 8</li>
             <li>Rank 9</li>
             <li class="special">
-                <span class="rank">Rank 10</span>  <span class="name">Concrete Souls</span>Leona Ashford
-                <span class="congratulations">CONGRATULATIONS! <img src="https://via.placeholder.com/20x20?text=%E2%9C%8C" alt="Star"></span> </li>
+                <span class="rank">Rank 10</span>  <span class="name">Concrete Souls</span> Leona Ashford
+                <span class="congratulations">CONGRATULATIONS! <img src="https://via.placeholder.com/20x20?text=%E2%9C%8C" alt="Star"></span> 
+            </li>
             <li>Rank 11</li>
             <li>Rank 12</li>
             <li>Rank 13</li>
             <li>Rank 14</li>
-			<li>Rank 15</li>
-          
-			
+            <li>Rank 15</li>
             <li>Rank 16</li>
             <li>Rank 17</li>
             <li>Rank 18</li>
             <li>Rank 19</li>
             <li>Rank 20</li>
             <li>Rank 21</li>
-			  <li class="special">
-                <span class="rank">Rank 22</span>  <span class="name">In the Wake of the Invisible Tide</span>Joseph Earl Thomas
-                <span class="congratulations">CONGRATULATIONS! <img src="https://via.placeholder.com/20x20?text=%E2%9C%8C" alt="Star"></span> </li>
-          
+            <li class="special">
+                <span class="rank">Rank 22</span>  <span class="name">In the Wake of the Invisible Tide</span> Joseph Earl Thomas
+                <span class="congratulations">CONGRATULATIONS! <img src="https://via.placeholder.com/20x20?text=%E2%9C%8C" alt="Star"></span> 
+            </li>
             <li>Rank 23</li>
             <li>Rank 24</li>
             <li>Rank 25</li>
@@ -148,16 +204,13 @@
         </ul>
     </div>
     <div class="footer">
-        
         <div>
             <img src="MSLOGO.png" alt="MSLOGO">
             <span>Event Sponsored By:</span>
         </div>
         <div>
-
-        <div>
             <img src="PAYSAFELOGO.jpg" alt="Paysafe Logo">
-             <span>GLOBAL SPONSOR</span>
+            <span>GLOBAL SPONSOR</span>
         </div>
     </div>
 </body>
